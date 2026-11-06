@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Registration Form</h1>
+        <p class="subtitle">Enter your details below</p>
+
+        <form id="registrationForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <p id="nameError" class="error"></p>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter your email">
+            <p id="emailError" class="error"></p>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter at least 6 characters">
+            <p id="passwordError" class="error"></p>
+
+            <label for="bio">Bio</label>
+            <textarea id="bio" maxlength="200" placeholder="Write something about yourself"></textarea>
+            <p id="bioCounter">0 / 200 characters</p>
+            <p id="bioError" class="error"></p>
+
+            <button type="submit" id="submitButton" disabled>Submit</button>
+            <p id="successMessage" class="success"></p>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h2>Submitted Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>BIO</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="detailsTable">
+                <!-- Submitted details will appear here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
